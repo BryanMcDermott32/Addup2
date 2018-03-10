@@ -10,11 +10,13 @@ public class CalculatorTest {
 
     int a;
     int b;
+    int c;
     Calculator calculator;
     @Before
     public void setUp() throws Exception {
     a=12;
     b=17;
+    c=24;
     calculator= new Calculator();
     }
 
@@ -46,4 +48,10 @@ public class CalculatorTest {
         assertEquals(expected,actual);
     }
 
+    @Test
+    public void addThree(){
+        int actual=a+b+c;
+        int expected=calculator.addThree(a,b,c);
+        assertEquals(expected,actual);
+    }
 }
